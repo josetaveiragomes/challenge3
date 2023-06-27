@@ -1,0 +1,29 @@
+Scenario: #1 Header Hamburger Icon
+
+Given the landing page
+When the user changes the width to under 767 px
+Then the Hamburger Icon should appear in the header
+
+Scenario Outline: #2 Header Language Change
+
+Given the landing page
+When the user changes the language to <Language>
+Then the language of the website should have changed to <Language>
+
+| Language  |
+| EN        |
+| DE        |
+| NL        |
+
+Scenario Outline: #3 Header Page Solutions Redirects
+
+Given the landing page
+When the user selects the option <Option> in the Solutions Menu
+Then the page of the website should have changed to <Page>
+
+| Option                | Page      |
+| SmartMed Hospital     | /hospital |
+| SmartMed Care         | /care     |
+| SmartMed Clinic       | /clinic   |
+| SmartMed forYou       | /foryou   |
+| SmartMed Pharmacy     | /pharmacy |
