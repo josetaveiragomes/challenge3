@@ -23,6 +23,10 @@ class Header {
     return elem;
   }
 
+  clickSolutions(): void {
+    this.solutions.click();
+  }
+
   solutionsOption(option: string): WebdriverIO.Element {
     const elem = this.header.$('nav[id="w-dropdown-list-0"]').$(`a=${option}`);
     elem.waitForDisplayed();

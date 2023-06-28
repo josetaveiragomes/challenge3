@@ -1,5 +1,4 @@
 import Page from '../page-objects/page';
-import CONSTANTS from "../constants";
 
 class Behaviour {
 
@@ -7,10 +6,6 @@ class Behaviour {
 
   constructor(page: Page) {
     this.page = page;
-  }
-
-  expectHeaderToBeInBaseState(): void {
-
   }
 
 }

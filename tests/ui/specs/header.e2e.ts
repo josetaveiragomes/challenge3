@@ -2,24 +2,39 @@
 import LandingPage from '../page-objects/landing.page';
 
 //BEHAVIOUR PATTERNS
-import LandingBehaviour from '../behaviour-patterns/landing.behaviour';
+import HeaderBehaviour from '../behaviour-patterns/header.behaviour';
 
 //CONSTANTS
 import CONSTANTS from "../constants";
 
 //TEST DATA
 const options = [
-  {URL: CONSTANTS.DEMO_URL.SOLUTIONS.HOSPITAL},
-  {URL: CONSTANTS.DEMO_URL.SOLUTIONS.CARE},
-  {URL: CONSTANTS.DEMO_URL.SOLUTIONS.CLINIC},
-  {URL: CONSTANTS.DEMO_URL.SOLUTIONS.FOR_YOU},
-  {URL: CONSTANTS.DEMO_URL.SOLUTIONS.PHARMACY}
+  {
+    URL: CONSTANTS.DEMO_URL.SOLUTIONS.HOSPITAL,
+    OPTION: CONSTANTS.HEADER_NL.SOLUTIONS.HOSPITAL,
+  },
+  {
+    URL: CONSTANTS.DEMO_URL.SOLUTIONS.CARE,
+    OPTION: CONSTANTS.HEADER_NL.SOLUTIONS.CARE,
+  },
+  {
+    URL: CONSTANTS.DEMO_URL.SOLUTIONS.CLINIC,
+    OPTION: CONSTANTS.HEADER_NL.SOLUTIONS.CLINIC,
+  },
+  {
+    URL: CONSTANTS.DEMO_URL.SOLUTIONS.FOR_YOU,
+    OPTION: CONSTANTS.HEADER_NL.SOLUTIONS.FOR_YOU,
+  },
+  {
+    URL: CONSTANTS.DEMO_URL.SOLUTIONS.PHARMACY,
+    OPTION: CONSTANTS.HEADER_NL.SOLUTIONS.PHARMACY,
+  }
 ]
 
-options.forEach(({URL}) =>{
-  describe(``, () => {
+options.forEach(({URL, OPTION}) =>{
+  describe(`#003 Header Page Solutions Redirects`, () => {
   
-    it(`should open the page successfully`, () => {
+    before(`should open the page successfully`, () => {
       //ACTIONS
       LandingPage.open();
       //ASSERTIONS
@@ -29,9 +44,9 @@ options.forEach(({URL}) =>{
 
     it(`should be redirected to "${CONSTANTS.DEMO_URL.BASE.NL}${URL}"`, () => {
       //ACTIONS
-      // TODO
+      HeaderBehaviour.selectSolution("");
       //ASSERTIONS
-      LandingPage.waitForUrlToBe(URL);
+      LandingPage.waitForUrlToBe(CONSTANTS.DEMO_URL.BASE.NL + URL);
       expect(browser.getUrl()).toContain(URL);
     });
   });
