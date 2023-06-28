@@ -1,13 +1,17 @@
 import Behaviour from './behaviour'
-import LandingPage from '../page-objects/landing.page';
+import Header from '../page-objects/components/header';
 
 class HeaderBehaviour extends Behaviour {
 
   selectSolution(option: string): void {
-    LandingPage.header.clickSolutions();
-    LandingPage.header.clickSolutionsOption(option);
+    Header.clickSolutions();
+    Header.clickSolutionsOption(option);
   }
 
+  selectLanguage(language: string): void {
+    Header.languageMenu.click();
+    Header.clickLanguage(language);
+  }
 }
 
-export default new HeaderBehaviour(LandingPage);
+export default new HeaderBehaviour();

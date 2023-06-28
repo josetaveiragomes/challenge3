@@ -20,12 +20,7 @@
   "scripts": {
     "wdio": "wdio run wdio.conf.ts",
     "selenium": "selenium-standalone start",
-    "login": "wdio wdio.conf.ts --spec login",
-    "session": "wdio wdio.conf.ts --spec session",
-    "sidebar": "wdio wdio.conf.ts --spec sidebar",
-    "footer": "wdio wdio.conf.ts --spec footer",
-    "checkout": "wdio wdio.conf.ts --spec checkout",
-    "end2end": "wdio wdio.conf.ts --spec end2end",
+    "header": "wdio wdio.conf.ts --spec header",
     "allure": "allure generate allure-results && allure open",
     "timeline": "open-cli reports/timeline-report.html"
   },

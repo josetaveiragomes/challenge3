@@ -4,8 +4,8 @@ class Behaviour {
 
   page: Page;
 
-  constructor(page: Page) {
-    this.page = page;
+  constructor(page?: Page) {
+    this.page = page ?? new Page('','');
   }
 
 }

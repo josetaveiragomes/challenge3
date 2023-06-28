@@ -4,18 +4,18 @@ const video = require('wdio-video-reporter');
 exports.config = {
   specs: ['./tests/ui/specs/**/*.ts'],
   suites: {
-    login: ['./tests/ui/specs/header.e2e.ts'],
+    header: ['./tests/ui/specs/header/*.ts'],
   },
   exclude: [],
   maxInstances: 5,
   capabilities: [
     {
-      maxInstances: 1,
+      maxInstances: 3,
       browserName: 'chrome',
       acceptInsecureCerts: true,
       'goog:chromeOptions': { 
         args: [
-          // "--headless",
+          "--headless",
           "--no-sandbox",
           "--ignore-certificate-errors",
           "--allow-insecure-localhost",

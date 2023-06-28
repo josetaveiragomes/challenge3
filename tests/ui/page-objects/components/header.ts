@@ -3,6 +3,7 @@ class Header {
   waitForComponentElements(): void{
     this.header.waitForDisplayed();
     this.solutions.waitForDisplayed();
+    this.languageMenu.waitForDisplayed();
   }
 
   get header(): WebdriverIO.Element {
@@ -21,6 +22,22 @@ class Header {
     const elem = this.header.$('div[id="w-dropdown-toggle-0"]').$('div[class*="dropdown-icon"]');
     elem.waitForDisplayed();
     return elem;
+  }
+
+  get languageMenu(): WebdriverIO.Element {
+    const elem = this.header.$('div[class="language"]');
+    elem.waitForDisplayed();
+    return elem;
+  }
+
+  getLanguage(language: string): WebdriverIO.Element {
+    const elem = this.header.$(`li[id="wg-${language}"]`);
+    elem.waitForDisplayed();
+    return elem;
+  }
+
+  clickLanguage(language: string): void {
+    this.getLanguage(language).click();
   }
 
   clickSolutions(): void {

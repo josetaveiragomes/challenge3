@@ -3,7 +3,7 @@ export default {
   DEMO_URL: {
     BASE: {
       EN: "https://en.smartmed.world",
-      DE: "https://de.smartmed.world/",
+      DE: "https://de.smartmed.world",
       NL: "https://www.smartmed.world",
     },
     SOLUTIONS: {
@@ -57,9 +57,9 @@ export default {
     },
     NEWS: "Nieuws",
     LANGUAGE:{
-      EN: "/en",
-      DE: "/de",
-      NL: "/nl",
+      EN: "en",
+      DE: "de",
+      NL: "nl",
     },
     CONTACT: "Contact",
   },
