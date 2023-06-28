@@ -1,5 +1,4 @@
 const { TimelineService } = require('wdio-timeline-reporter/timeline-service');
-const video = require('wdio-video-reporter');
 
 exports.config = {
   specs: ['./tests/ui/specs/**/*.ts'],
@@ -46,23 +45,6 @@ exports.config = {
         outputDir: 'reports',
         embedImages: true,
         screenshotStrategy: 'on:error',
-      }
-    ],
-    [
-      video, 
-      {
-        outputDir: 'reports',
-        saveAllVideos: false,
-        videoSlowdownMultiplier: 3,
-        videoRenderTimeout: 5,
-      }
-    ],
-    [
-      'allure', 
-      {
-        outputDir: 'allure-results',
-        disableWebdriverStepsReporting: true,
-        disableWebdriverScreenshotsReporting: false,
       }
     ],
   ],

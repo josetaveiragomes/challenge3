@@ -2,10 +2,10 @@ import Page from '../page-objects/page';
 
 class Behaviour {
 
-  page: Page;
+  page: Page | null;
 
   constructor(page?: Page) {
-    this.page = page ?? new Page('','');
+    this.page = page ?? null;
   }
 
 }
