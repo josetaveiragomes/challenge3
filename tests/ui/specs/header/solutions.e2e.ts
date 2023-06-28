@@ -2,7 +2,7 @@
 import LandingPage from '../../page-objects/landing.page';
 
 //BEHAVIOUR PATTERNS
-import HeaderBehaviour from '../../behaviour-patterns/header.behaviour';
+import HeaderBehaviour from '../../behaviour-patterns/components/header.behaviour';
 
 //CONSTANTS
 import CONSTANTS from "../../constants";

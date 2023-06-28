@@ -1,5 +1,5 @@
-import Behaviour from './behaviour'
-import Header from '../page-objects/components/header';
+import Behaviour from '../behaviour'
+import Header from '../../page-objects/components/header';
 
 class HeaderBehaviour extends Behaviour {
 
