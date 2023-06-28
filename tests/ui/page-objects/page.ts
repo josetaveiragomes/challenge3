@@ -35,10 +35,6 @@ class Page {
     )
   }
 
-  changeWidth(width: number, height: number): void {
-    browser.setWindowSize(width, height)
-  }
-
   get header(): typeof Header {
     return Header;
   }

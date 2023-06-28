@@ -3,9 +3,6 @@ import CONSTANTS from "../constants";
 
 class LandingPage extends Page {
 
-  waitForPageElements(): void{
-  }
-
 }
 
 export default new LandingPage(CONSTANTS.DEMO_URL.BASE.NL, CONSTANTS.EMPTY_STRING);

@@ -18,7 +18,7 @@ class Header {
   }
 
   get solutions(): WebdriverIO.Element {
-    const elem = this.header.$('div[id="w-dropdown-toggle-0"]');
+    const elem = this.header.$('div[id="w-dropdown-toggle-0"]').$('div[class*="dropdown-icon"]');
     elem.waitForDisplayed();
     return elem;
   }
@@ -28,7 +28,7 @@ class Header {
   }
 
   solutionsOption(option: string): WebdriverIO.Element {
-    const elem = this.header.$('nav[id="w-dropdown-list-0"]').$(`a=${option}`);
+    const elem = this.header.$(`//nav[@id='w-dropdown-list-0']/a[text()='${option}']`);
     elem.waitForDisplayed();
     return elem;
   }

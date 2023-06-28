@@ -15,7 +15,7 @@ exports.config = {
       acceptInsecureCerts: true,
       'goog:chromeOptions': { 
         args: [
-          "--headless",
+          // "--headless",
           "--no-sandbox",
           "--ignore-certificate-errors",
           "--allow-insecure-localhost",
