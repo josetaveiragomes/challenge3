@@ -20,7 +20,6 @@
     "wdio": "wdio run wdio.conf.ts",
     "selenium": "selenium-standalone start",
     "header": "wdio wdio.conf.ts --spec header",
-    "allure": "allure generate allure-results && allure open",
     "timeline": "open-cli reports/timeline-report.html"
   },
   "devDependencies": {
